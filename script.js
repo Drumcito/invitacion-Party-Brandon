@@ -3,10 +3,10 @@ const EVENT = {
   name: "Fiesta",
   person: "Brandon",
   dateText: "28 de marzo 2026",
-  timeText: "3:00 PM",
+  timeText: "3:30 PM",
   placeText: "Salon Magico Encuentro",
   // Formato recomendado: "2026-07-20T20:00:00-06:00"
-  isoDate: "2026-03-28T15:00:00-06:00",
+  isoDate: "2026-03-28T15:30:00-06:00",
   mapsUrl: "https://maps.app.goo.gl/FDfZbyakYAjGk22D8", // pon tu link real aquí
   rsvpEmail: "brandon.asc15@gmail.com", // cámbialo
   rsvpSubject: "Confirmación de asistencia",
