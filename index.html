@@ -2,35 +2,127 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misión Graduado</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brandon-Fest xd</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@300;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@300;600;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <!-- Fondo estilo cómic -->
+    <div class="comic-bg" aria-hidden="true"></div>
 
-    <section class="hero">
-        <h1>MISIÓN GRADUADO</h1>
-        <p class="subtitle">Después de años de entrenamiento… la misión fue completada 🎓</p>
+    <header class="hero">
+        <div class="badge pop">¡INVITACIÓN OFICIAL!</div>
 
-        <div class="card">
-            <h2>Estás invitado a celebrar</h2>
-            <p><strong>Brandon</strong></p>
-            <p>Ingeniero en Sistemas Computacionales 🖥️⚡</p>
-            <p class="date">📅 20 de Julio 2026</p>
-            <p>📍 Salón Avengers, Coacalco</p>
+        <h1 class="title pop">TERMINAMOS LA ESCUELA</h1>
+        <p class="subtitle reveal">YA CASI SOMOS INGES, PARA PONER MI PUESTO DE BARBACOA</p>
+
+        <div class="card reveal">
+            <div class="speech">
+                <h2>Estás invitado a celebrar</h2>
+                <p class="who"><strong>Brandon</strong></p>
+                <p class="role">cuasiIngeniero en Sistemas Computacionales</p>
+
+                <div class="meta">
+                    <p class="date">📅 <span id="eventDateText">28 de marzo de 2026</span></p>
+                    <p>🕗 <span id="eventTimeText">4:00 PM</span></p>
+                    <p>📍 <span id="eventPlaceText">Salon Magico Encuentro</span></p>
+                </div>
+            </div>
+
+            <div id="countdown" class="countdown" aria-live="polite"></div>
+
+            <div class="actions">
+                <a id="mapLink" href="https://maps.app.goo.gl/FDfZbyakYAjGk22D8" target="_blank"
+                    class="btn btn-primary">
+                    Ver ubicación
+                </a>
+
+                <!-- RSVP simple -->
+                <a id="rsvpMailto" class="btn btn-ghost" href="#">
+                    Confirmar asistencia ✅
+                </a>
+            </div>
+
+            <!-- Música -->
+            <div class="music">
+                <button id="musicBtn" class="btn btn-music" type="button" aria-pressed="false">
+                    ▶ Música
+                </button>
+                <small class="hint"></small>
+                <audio id="bgMusic" preload="auto" loop>
+                    <source src="assets/SupermanTheme.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
         </div>
 
-        <div id="countdown"></div>
+        <div class="pow reveal">
+            <span>POW!</span><span>BOOM!</span><span>WOW!</span>
+        </div>
+    </header>
 
-        <a href="https://maps.google.com" target="_blank" class="btn">
-            Ver ubicación secreta 🗺️
-        </a>
-    </section>
+    <main class="container">
+        <!-- Sección fotos tipo cómic -->
+        <section class="section reveal">
+            <h3 class="section-title">Mi historia en la uni</h3>
+            <p class="section-sub">Asi sobrevivi 4.5 años de carrera</p>
+
+            <div class="manga">
+                <div class="manga-frame">
+
+                    <button class="nav prev" id="prevPage">⟵</button>
+
+                    <div class="page show">
+                        <img class="media" src="assets/halcones.jpeg" alt="">
+                        <div class="caption">Capítulo 1: Dormilón 😴</div>
+                    </div>
+
+                    <div class="page">
+                        <video class="media" controls playsinline preload="metadata">
+                            <source src="assets/mimido.mp4" type="video/mp4">
+                        </video>
+                        <div class="caption">Capítulo 2: No dormí pero entregué 😤</div>
+                    </div>
+
+                    <div class="page">
+                        <img class="media" src="assets/amigos.jpeg" alt="">
+                        <div class="caption">Capítulo 3: Equipo de héroes 🫂</div>
+                    </div>
+
+                    <div class="page">
+                        <img class="media" src="assets/yo.jpeg" alt="">
+                        <div class="caption">Final: Graduado 🎓🔥</div>
+                    </div>
+
+                    <button class="nav next" id="nextPage">⟶</button>
+
+                </div>
+
+                <div class="manga-ui">
+                    <span id="pageIndicator">1 / 4</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detalles extra -->
+        <section class="section reveal">
+            <h3 class="section-title">Código de héroes 🦸‍♂️</h3>
+            <div class="rules">
+                <div class="rule bubble">🎁 Traje: Casual / Cómodo</div>
+                <div class="rule bubble">🍕 Habrá comida y bebida</div>
+                <div class="rule bubble">📸 Se aceptan fotos épicas</div>
+                <div class="rule bubble">😎 Lleva actitud de superhéroe</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Hecho con vibra cómic ⚡ | <span id="year"></span></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
